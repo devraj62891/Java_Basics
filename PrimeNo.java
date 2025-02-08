@@ -5,7 +5,7 @@ public class PrimeNo {
         if(a==1 || a==0){
             return false;
         }else {
-            for(int i=2;i<Math.sqrt(a);i++){
+            for(int i=2;i<=Math.sqrt(a);i++){
                 if(a%i==0){
                     return false;
                 }
