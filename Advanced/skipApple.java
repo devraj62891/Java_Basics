@@ -1,12 +1,12 @@
 public class skipApple {
     static String skip(String s){
         if(s==""){
-            return s;
+            return "";
         }
         if(s.startsWith("apple")){
             return skip(s.substring(5));
         }else{
-            return s.charAt(0)+ skip(s.substring(1));
+            return s.charAt(0)+skip(s.substring(1));
         }
     }
     public static void main(String[] args) {

@@ -2,18 +2,18 @@
 
 public class BinarySearch {
     static int BS(int arr[],int target,int si,int ei){
-        if(si>ei){
-            return -1;
-        }
-        int mid=si+(ei-si)/2;
-        if(arr[mid]==target){
-            return mid;
-        }
-        if(target<arr[mid]){
-           return BS(arr,target,si,mid-1);
-        }
-        return BS(arr,target,mid+1,ei);
-        
+       if(si>ei){
+        return -1;
+       }
+
+       int mid=si+(ei-si)/2;
+       if(target==arr[mid]){
+        return mid;
+       }
+       if(target>arr[mid]){
+        return BS(arr, target, mid+1, ei);
+       }
+       return BS(arr, target, si, mid);
 
     }
     public static void main(String[] args) {
